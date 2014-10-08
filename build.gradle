@@ -1,0 +1,29 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'idea'
+
+buildscript {
+  repositories {
+    //jcenter()
+    //mavenCentral()
+    //mavenLocal()
+    maven { url 'http://sharyuke.com:8081/nexus/content/groups/public' }
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:0.12.+'
+    classpath 'com.neenbedankt.gradle.plugins:android-apt:1.+'
+  }
+}
+
+allprojects {
+  repositories {
+    maven { url 'http://sharyuke.com:8081/nexus/content/groups/public' }
+  }
+}
+
+
+def gradleAndroidAnnotationsPluginVersion = '0.3.0'
+
+dependencies {
+}
+
+
